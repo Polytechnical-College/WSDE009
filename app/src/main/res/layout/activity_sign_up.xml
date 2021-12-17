@@ -3,14 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@drawable/bg_signin"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@drawable/bg_signin"
+    tools:context=".SignUp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,82 +19,98 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_marginHorizontal="30dp"
             android:gravity="bottom"
+            android:layout_weight="3"
             android:orientation="vertical">
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/loginInput"
+                android:id="@+id/createLogin"
+                style="@style/CustomOutlineBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:startIconTint="@color/lighter_grey"
-                android:hint="Login"
+                android:layout_marginBottom="5dp"
+                android:hint="Ivanov.I"
                 app:startIconDrawable="@drawable/login_icon"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                app:startIconTint="@color/light_grey">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/white"
                     android:fontFamily="@font/ubuntu" />
-
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/passwordInput"
                 style="@style/CustomOutlineBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                app:startIconTint="@color/lighter_grey"
-                android:hint="Password"
-                app:startIconDrawable="@drawable/password_icon">
+                android:layout_marginBottom="5dp"
+                android:hint="ivanov@gmail.com"
+                android:id="@+id/createEmail"
+                app:startIconDrawable="@drawable/email_icon"
+                app:startIconTint="@color/light_grey">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/ubuntu"
-                    android:inputType="textPassword"
-                    android:background="@color/white" />
-
+                    android:background="@color/white"
+                    android:fontFamily="@font/ubuntu"/>
             </com.google.android.material.textfield.TextInputLayout>
-            <TextView
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/CustomOutlineBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:text="Forgot Password ?"
-                android:fontFamily="@font/ubuntu"
-                android:layout_marginVertical="18dp"/>
+                android:layout_marginBottom="5dp"
+                android:hint="Password"
+                android:id="@+id/createPwd"
+                app:startIconDrawable="@drawable/password_icon"
+                app:startIconTint="@color/light_grey">
 
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:fontFamily="@font/ubuntu"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <Button
-                android:id="@+id/signIn"
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/CustomOutlineBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Sign In"
-                style="@style/ButtonsCustom"/>
+                android:hint="Repeat Password"
+                android:id="@+id/repeatPwd"
+                app:startIconDrawable="@drawable/password_icon"
+                app:startIconTint="@color/light_grey">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:fontFamily="@font/ubuntu"/>
+            </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
-
-
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
             android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_weight="1"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/createAc"
+            <Button
+                android:id="@+id/button2"
+                style="@style/ButtonsCustom"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:paddingVertical="5dp"
-                android:text="Create A New Account ?"
+                android:text="Sign up"
+                android:textStyle="bold"
                 android:fontFamily="@font/ubuntu"/>
         </LinearLayout>
-
     </LinearLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
